@@ -78,14 +78,15 @@ body{
 .main_section--content_div--input{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 3rem 3rem 0 5rem;
     width: 60%;
 }
 
 .main_section--content_div--input input{
-    width: 100%;
-    height: 50vh;
+    width: 70%;
+    height: 40vh;
+    border-color: #FFFFFF;
     background-color: var(--background-color);
 }
 
@@ -152,6 +153,7 @@ body{
 .footer_main--text {
     display: flex;
     flex-direction:  column;
+    text-align: center;
 }
 
 .footer_main--ico {
