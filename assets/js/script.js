@@ -87,10 +87,40 @@ function copyText(){
         });
 }
 
+function openModal(){
+    let historysection = document.getElementsByClassName("history_section");
+    historysection[0].style.visibility = "visible";
+    historysection[0].classList.add("opened")
+    let inputsection = document.getElementsByClassName("main_section--content_div--input")[0];
+    let outputsection = document.getElementsByClassName("main_section--content_div--output")[0];
+    let clickstopdiv = document.getElementsByClassName("clickstop_div")[0];
+    clickstopdiv.style.visibility = "visible"
+    inputsection.style.filter = "blur(5px)";
+    outputsection.style.filter = "blur(5px)";
+}
+
+function closeModal(){
+    let historysection = document.getElementsByClassName("history_section");
+    historysection[0].classList.remove("opened")
+    let inputsection = document.getElementsByClassName("main_section--content_div--input")[0];
+    let outputsection = document.getElementsByClassName("main_section--content_div--output")[0];
+    let clickstopdiv = document.getElementsByClassName("clickstop_div")[0];
+    clickstopdiv.style.visibility = "hidden"
+    inputsection.style.filter = "";
+    outputsection.style.filter = "";
+}
+
 let encryptbutton = document.getElementById("encrypt_button");
 let decryptbutton = document.getElementById("decrypt_button");
 let copybutton = document.getElementById("copy_button");
+let historybutton = document.getElementsByClassName("history_button")[0];
+let closebutton = document.getElementsByClassName("history_section--closebutton")[0];
 
 encryptbutton.addEventListener("click", encrypt);
 decryptbutton.addEventListener("click", deecrypt);
 copybutton.addEventListener("click", copyText);
+historybutton.addEventListener("click", (event)=>{
+    event.preventDefault();
+    openModal();
+});
+closebutton.addEventListener("click", closeModal)
