@@ -150,6 +150,8 @@ body{
 }
 
 .main_section--content_div--output_img{
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,12 +181,25 @@ body{
 
 .main_section--content_div--output--text{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     visibility: hidden;
     background-color: #FFFFFF;
     top: 0;
     width: 100%;
     height: 80vh;
     border-radius: 2rem;
+    overflow-y:scroll;
+}
+
+.main_section--content_div--output--text_p{
+    padding: 1.5rem;
+    overflow-wrap: break-word;
+    text-align: justify;
+    min-width: 0; 
+    font-size: 2rem;
+    color: var(--gray-400);
 }
 
 .footer_main{
