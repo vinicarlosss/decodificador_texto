@@ -202,6 +202,7 @@ body{
 .main_section--content_div--output--text_div--button{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .main_section--content_div--output--text_p{
