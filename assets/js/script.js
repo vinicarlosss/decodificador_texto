@@ -31,12 +31,15 @@ function encrypt(){
 
 function deecrypt(){
     let text = document.getElementsByClassName("main_section--content_div--output--text_p")[0].innerHTML;
-    text = text.replaceAll("enter", "e");
-    text = text.replaceAll("imes", "i");
-    text = text.replaceAll("ai", "a");
-    text = text.replaceAll("ober", "o");
-    text = text.replaceAll("ufat", "u");
-    writeText(text);
+    let divtext = document.getElementsByClassName("main_section--content_div--output--text")[0]
+    if(divtext.style.visibility == 'visible'){
+        text = text.replaceAll("enter", "e");
+        text = text.replaceAll("imes", "i");
+        text = text.replaceAll("ai", "a");
+        text = text.replaceAll("ober", "o");
+        text = text.replaceAll("ufat", "u");
+        writeText(text);
+    }
 }
 
 function writeText(text){
