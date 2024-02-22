@@ -21,15 +21,23 @@ function encrypt(){
     if(verifyString(text)){
         return;
     };
-    /*'*/
     text = text.replaceAll("e", "enter");
     text = text.replaceAll("i", "imes");
     text = text.replaceAll("a", "ai");
     text = text.replaceAll("o", "ober");
     text = text.replaceAll("u", "ufat");
-    text = text.replaceAll(" ", "");
     writeText(text);
 };
+
+function deecrypt(){
+    let text = document.getElementsByClassName("main_section--content_div--output--text_p")[0].innerHTML;
+    text = text.replaceAll("enter", "e");
+    text = text.replaceAll("imes", "i");
+    text = text.replaceAll("ai", "a");
+    text = text.replaceAll("ober", "o");
+    text = text.replaceAll("ufat", "u");
+    writeText(text);
+}
 
 function writeText(text){
     let notfountimg = document.getElementsByClassName("main_section--content_div--output_img")[0];
@@ -47,5 +55,7 @@ function writeText(text){
 };
 
 let encryptbutton = document.getElementById("encrypt_button");
+let decryptbutton = document.getElementById("decrypt_button");
 
 encryptbutton.addEventListener('click', encrypt);
+decryptbutton.addEventListener('click', deecrypt);
