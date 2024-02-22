@@ -1,5 +1,5 @@
 function verifyString(string){
-    let regex = /([áàãâéèêíìóòõôúùũû])|([A-Z])|([ÁÀÃÂÉÈÊÍÌÓÒÕÔÚÙŨÛ])|([^\w\s])|([0-9])/;
+    let regex = /([áàãâéèêíìóòõôúùũû])|([A-Z])|([ÁÀÃÂÉÈÊÍÌÓÒÕÔÚÙŨÛ])|([^\w\s.,!?])|([0-9])/;
     if(regex.test(string)){
         Toastify({
             text: "Texto inválido!",
@@ -62,7 +62,7 @@ function copyText(){
     navigator.clipboard.writeText(text)
         .then(()=>{
             Toastify({
-                text: "Texto copiado para área de trabalho!",
+                text: "Texto copiado para a área de trabalho!",
                 duration: 3000,
                 gravity: "top", 
                 position: "center",
