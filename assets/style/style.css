@@ -182,8 +182,7 @@ body{
 .main_section--content_div--output--text{
     position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     visibility: hidden;
     background-color: #FFFFFF;
     top: 0;
@@ -193,6 +192,18 @@ body{
     overflow-y:scroll;
 }
 
+.main_section--content_div--output--text_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.main_section--content_div--output--text_div--button{
+    display: flex;
+    justify-content: center;
+}
+
 .main_section--content_div--output--text_p{
     padding: 1.5rem;
     overflow-wrap: break-word;
@@ -200,6 +211,14 @@ body{
     min-width: 0; 
     font-size: 2rem;
     color: var(--gray-400);
+}
+
+.copy_button{
+    width: 336px;
+    height: 67px;
+    background-color: #FFFFFF;
+    color: var(--dark-blue);
+    border-radius: 2rem;
 }
 
 .footer_main{

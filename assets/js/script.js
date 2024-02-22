@@ -57,8 +57,40 @@ function writeText(text){
     
 };
 
+function copyText(){
+    let text = document.getElementsByClassName("main_section--content_div--output--text_p")[0].innerHTML;
+    navigator.clipboard.writeText(text)
+        .then(()=>{
+            Toastify({
+                text: "Texto copiado para área de trabalho!",
+                duration: 3000,
+                gravity: "top", 
+                position: "center",
+                stopOnFocus: true,
+                style: {
+                    background: "#0A3871",
+            },
+                close: true 
+            }).showToast();
+        }).catch((err)=>{
+            Toastify({
+                text: "Erro ao copiar texto!",
+                duration: 3000,
+                gravity: "top", 
+                position: "center",
+                stopOnFocus: true,
+                style: {
+                    background: "#0A3871",
+            },
+                close: true 
+            }).showToast();
+        });
+}
+
 let encryptbutton = document.getElementById("encrypt_button");
 let decryptbutton = document.getElementById("decrypt_button");
+let copybutton = document.getElementById("copy_button");
 
-encryptbutton.addEventListener('click', encrypt);
-decryptbutton.addEventListener('click', deecrypt);
+encryptbutton.addEventListener("click", encrypt);
+decryptbutton.addEventListener("click", deecrypt);
+copybutton.addEventListener("click", copyText);
