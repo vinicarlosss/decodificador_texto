@@ -1,7 +1,17 @@
 function verifyString(string){
     let regex = /([áàãâéèêíìóòõôúùũû])|([A-Z])|([ÁÀÃÂÉÈÊÍÌÓÒÕÔÚÙŨÛ])|([^\w\s])|([0-9])/;
     if(regex.test(string)){
-        alert("String inválida");
+        Toastify({
+            text: "Texto inválido!",
+            duration: 3000,
+            gravity: "top", 
+            position: "center",
+            stopOnFocus: true,
+            style: {
+                background: "#0A3871",
+        },
+            close: true 
+        }).showToast();
         return true
     }
 };
