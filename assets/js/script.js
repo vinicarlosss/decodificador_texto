@@ -89,7 +89,8 @@ function copyText(){
 
 function openModal(){
     let historysection = document.getElementsByClassName("about_section");
-    historysection[0].style.visibility = "visible";
+    let textdiv = document.getElementsByClassName("about_section--text_div");
+    textdiv[0].classList.add("opened")
     historysection[0].classList.add("opened")
     let inputsection = document.getElementsByClassName("main_section--content_div--input")[0];
     let outputsection = document.getElementsByClassName("main_section--content_div--output")[0];
@@ -101,6 +102,8 @@ function openModal(){
 
 function closeModal(){
     let historysection = document.getElementsByClassName("about_section");
+    let textdiv = document.getElementsByClassName("about_section--text_div");
+    textdiv[0].classList.remove("opened")
     historysection[0].classList.remove("opened")
     let inputsection = document.getElementsByClassName("main_section--content_div--input")[0];
     let outputsection = document.getElementsByClassName("main_section--content_div--output")[0];
