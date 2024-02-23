@@ -332,6 +332,23 @@ body{
     gap: 0.5rem;
 }
 
+/*Dispositivos de tela média */
+
+@media only screen and (max-width: 1300px){
+
+    .main_section--content_div--input{
+        width: 65%;
+    }
+
+    .main_section--content_div--output{
+        width: 35%;
+    }
+
+    .main_secition--content_div--input--button{
+        width: 90%;
+    }
+}
+
 /*Tablet */
 
 @media  only screen and (max-width: 820px) {
