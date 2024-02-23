@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,55 +11,74 @@
     <script defer src=".//assets/js/script.js"></script>
     <title>Decodificador de texto| Alura Challenge</title>
 </head>
+
 <body>
     <header class="header_main">
         <div class="header_logo">
             <img src="./assets/img/logo.png" alt="Logo">
         </div>
         <nav class="header_nav">
-            <a class="history_button" href="">Histórico</a>
+            <a class="about_button" href="">Sobre mim</a>
         </nav>
     </header>
     <main class="main_container">
-            <section class="main_section--content_div--input">
-                <h1 class="main_section--content_div--input--title">Digite seu texto</h1>
-                <textarea id="input" placeholder="Digite aqui..."></textarea>
-                <div class="main_section--content_div--input--content_div">
-                    <img class="main_section--content_div--input--img" src="./assets/img/warning.png" alt="warning">
-                    <p class="main_section--content_div--input--p">Apenas letras minúsculas e sem acento</p>
+        <section class="main_section--content_div--input">
+            <h1 class="main_section--content_div--input--title">Digite seu texto</h1>
+            <textarea id="input" placeholder="Digite aqui..."></textarea>
+            <div class="main_section--content_div--input--content_div">
+                <img class="main_section--content_div--input--img" src="./assets/img/warning.png" alt="warning">
+                <p class="main_section--content_div--input--p">Apenas letras minúsculas e sem acento</p>
+            </div>
+            <div class="main_secition--content_div--input--button">
+                <button id="encrypt_button">Criptografar</button>
+                <button id="decrypt_button">Descriptografar</button>
+            </div>
+        </section>
+        <section class="main_section--content_div--output">
+            <div class="main_section--content_div--output_img">
+                <img src="./assets/img/not-found.png" alt="imagem indicando que texto não foi digitado">
+                <div class="main_section--content_div--output_img--strong">
+                    <strong>Nenhuma mensagem </strong>
+                    <strong>encontrada</strong>
                 </div>
-                <div class="main_secition--content_div--input--button">
-                    <button id="encrypt_button">Criptografar</button>
-                    <button id="decrypt_button">Descriptografar</button>
+                <div class="main_section--content_div--output_img--p">
+                    <p>Digite um texto que você deseja criptografar ou</p>
+                    <p> descriptografar</p>
                 </div>
-            </section>
-            <section class="main_section--content_div--output">
-                <div class="main_section--content_div--output_img">
-                    <img src="./assets/img/not-found.png" alt="imagem indicando que texto não foi digitado">
-                    <div class="main_section--content_div--output_img--strong">
-                        <strong>Nenhuma mensagem </strong>
-                        <strong>encontrada</strong>
-                    </div>
-                    <div class="main_section--content_div--output_img--p">
-                        <p>Digite um texto que você deseja criptografar ou</p>
-                        <p> descriptografar</p>
-                    </div>
+            </div>
+            <div class="main_section--content_div--output--text">
+                <div class="main_section--content_div--output--text_div">
+                    <span class="main_section--content_div--output--text_p"></span>
                 </div>
-                <div class="main_section--content_div--output--text">
-                    <div class="main_section--content_div--output--text_div">
-                        <span class="main_section--content_div--output--text_p"></span>
-                    </div>
-                    <div class="main_section--content_div--output--text_div--button">
-                        <button id="copy_button" class="copy_button">Copiar</button>
-                    </div>
+                <div class="main_section--content_div--output--text_div--button">
+                    <button id="copy_button" class="copy_button">Copiar</button>
                 </div>
-            </section>
-            <div class="clickstop_div"></div>
-            <section class="history_section">
-                <div class="history_section--closebutton_div">
-                    <img class="history_section--closebutton" src="./assets/img/fechar.png" alt="ícone de fechar a aba de histórico">
+            </div>
+        </section>
+        <div class="clickstop_div"></div>
+        <section class="about_section">
+            <div class="about_section--closebutton_div">
+                <img class="about_section--closebutton" src="./assets/img/fechar.png"
+                    alt="ícone de fechar a aba de sobre mim">
+            </div>
+            <div class="about_section--text_div">
+                <strong class="about_section--text-span">Ola, meu nome é Carlos e sou o desenvolvedor desse projeto,
+                    amante de animais e estudante de tecnologia pela universidade federal rural de Pernambuco.
+                    Atualmente venho concentrando meus esforços no desenvolvimento back end com java/spring boot e
+                    também na área de análise de dados com python</strong>
+                <span>Você pode me contactar por:</span>
+                <div class="about_section--midiaitems-div">
+                    <a  href="https://www.instagram.com/vinicarlosss/" target="_blank"><img class="about_section--midiaicons"
+                            src="./assets/img/instagram.png" alt="ícone instagram"></a>
+                    <a  href="https://www.linkedin.com/in/vinicarlosss/" target="_blank"><img class="about_section--midiaicons"
+                            src="./assets/img/linkedin.png" alt="ícone linkedin"></a>
                 </div>
-            </section>
+                <span>Email: <a class="about_section--email" href="mailto: carlos.viniciusufrpe@gmail.com">carlos.viniciusufrpe@gmail.com</a></span>
+                <span>Você também pode visualizar meus projetos através do meu github, inclusive o código desse projeto estará lá</span>
+                <a  href="https://github.com/vinicarlosss" target="_blank"><img class="about_section--midiaicons" src="./assets/img/github.png"
+                    alt="ícone github"></a>
+            </div>
+        </section>
     </main>
     <footer class="footer_main">
         <div class="footer_main--text">
@@ -66,10 +86,14 @@
             <strong>@Alura Challenge || @Oracle Next Education</strong>
         </div>
         <div class="footer_main--ico">
-            <a href="https://www.instagram.com/vinicarlosss/" target="_blank"><img src="./assets/img/instagram.png" alt="ícone instagram"></a>
-            <a href="https://github.com/vinicarlosss" target="_blank"><img src="./assets/img/github.png" alt="ícone github"></a>
-            <a href="https://www.linkedin.com/in/vinicarlosss/" target="_blank"><img src="./assets/img/linkedin.png" alt="ícone linkedin"></a>
+            <a href="https://www.instagram.com/vinicarlosss/" target="_blank"><img src="./assets/img/instagram.png"
+                    alt="ícone instagram"></a>
+            <a href="https://github.com/vinicarlosss" target="_blank"><img src="./assets/img/github.png"
+                    alt="ícone github"></a>
+            <a href="https://www.linkedin.com/in/vinicarlosss/" target="_blank"><img src="./assets/img/linkedin.png"
+                    alt="ícone linkedin"></a>
         </div>
     </footer>
 </body>
+
 </html>

@@ -16,7 +16,7 @@ function verifyString(string){
     }
 };
 
-function encrypt(){
+function encrypt(words){
     let text = document.getElementById("input").value;
     if(verifyString(text)){
         return;
@@ -29,7 +29,7 @@ function encrypt(){
     writeText(text);
 };
 
-function deecrypt(){
+function decrypt(){
     let text = document.getElementById("input").value;
     if(verifyString(text)){
         return;
@@ -88,7 +88,7 @@ function copyText(){
 }
 
 function openModal(){
-    let historysection = document.getElementsByClassName("history_section");
+    let historysection = document.getElementsByClassName("about_section");
     historysection[0].style.visibility = "visible";
     historysection[0].classList.add("opened")
     let inputsection = document.getElementsByClassName("main_section--content_div--input")[0];
@@ -100,12 +100,12 @@ function openModal(){
 }
 
 function closeModal(){
-    let historysection = document.getElementsByClassName("history_section");
+    let historysection = document.getElementsByClassName("about_section");
     historysection[0].classList.remove("opened")
     let inputsection = document.getElementsByClassName("main_section--content_div--input")[0];
     let outputsection = document.getElementsByClassName("main_section--content_div--output")[0];
     let clickstopdiv = document.getElementsByClassName("clickstop_div")[0];
-    clickstopdiv.style.visibility = "hidden"
+    clickstopdiv.style.visibility = "hidden";
     inputsection.style.filter = "";
     outputsection.style.filter = "";
 }
@@ -113,11 +113,15 @@ function closeModal(){
 let encryptbutton = document.getElementById("encrypt_button");
 let decryptbutton = document.getElementById("decrypt_button");
 let copybutton = document.getElementById("copy_button");
-let historybutton = document.getElementsByClassName("history_button")[0];
-let closebutton = document.getElementsByClassName("history_section--closebutton")[0];
+let historybutton = document.getElementsByClassName("about_button")[0];
+let closebutton = document.getElementsByClassName("about_section--closebutton")[0];
 
-encryptbutton.addEventListener("click", encrypt);
-decryptbutton.addEventListener("click", deecrypt);
+encryptbutton.addEventListener("click", ()=>{
+    encrypt();
+});
+decryptbutton.addEventListener("click", ()=>{
+    decrypt();
+});
 copybutton.addEventListener("click", copyText);
 historybutton.addEventListener("click", (event)=>{
     event.preventDefault();
